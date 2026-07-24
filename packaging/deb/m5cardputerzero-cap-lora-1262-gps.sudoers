@@ -1,0 +1,1 @@
+%gpio ALL=(root) NOPASSWD: /usr/share/APPLaunch/bin/M5CardputerZero-Cap-LoRa-1262-GPS ""

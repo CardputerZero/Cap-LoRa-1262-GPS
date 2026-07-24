@@ -1,0 +1,22 @@
+[
+    {
+        "url": "https://github.com/lvgl/lvgl.git",
+        "path": "dependencies/lvgl",
+        "branch": "v9.5.0"
+    },
+    {
+        "url": "https://github.com/gabime/spdlog.git",
+        "path": "dependencies/spdlog",
+        "branch": "v1.17.0"
+    },
+    {
+        "url": "https://github.com/Forairaaaaa/smooth_ui_toolkit.git",
+        "path": "dependencies/smooth_ui_toolkit",
+        "branch": "v2.13.0"
+    },
+    {
+        "url": "https://github.com/kosma/minmea.git",
+        "path": "dependencies/minmea",
+        "branch": "2dd2cd11a359de5583e68053182d5bbf29725934"
+    }
+]
