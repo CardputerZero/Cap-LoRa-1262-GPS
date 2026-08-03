@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(M5CardputerZeroCapLoRa1262GPS VERSION 0.1.0 LANGUAGES C CXX ASM)
+project(M5CardputerZeroCapLoRa1262GPS VERSION 0.1.1 LANGUAGES C CXX ASM)
 
 option(CAP_GPS_USE_SDL "Use LVGL's SDL backend and mock GPS receiver" ON)
 option(BUILD_TESTING "Build Cap-LoRa-1262-GPS tests" OFF)
