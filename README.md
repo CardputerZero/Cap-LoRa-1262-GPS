@@ -61,6 +61,7 @@ Key controls:
 
 - `Z`/`C` or Left/Right: switch between Position and Details
 - `F`/`X` or Up/Down: scroll Details
+- `Fn+H` (desktop: `H`): show or close Help; Esc also closes Help
 - Enter: retry receiver initialization after an error
 - Esc: close a dialog or exit
 

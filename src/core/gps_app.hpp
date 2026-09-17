@@ -2,9 +2,11 @@
 
 #include "models/gps_model.hpp"
 #include "view_models/gps_view_model.hpp"
+#include "views/help_view.hpp"
 #include "views/gps_view.hpp"
 
 #include <lvgl.h>
+#include <memory>
 
 namespace cap_gps {
 
@@ -31,9 +33,11 @@ private:
     GpsModel _model;
     GpsViewModel _view_model;
     GpsView _view;
+    std::unique_ptr<HelpView> _help_view;
     lv_group_t* _input_group = nullptr;
     bool _quit_requested     = false;
     bool _started            = false;
+    bool _help_pressed       = false;
 
     void setupInputGroup();
     static void onKeyboardEvent(lv_event_t* event);

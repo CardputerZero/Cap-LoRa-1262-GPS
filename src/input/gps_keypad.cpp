@@ -1,5 +1,7 @@
 #include "input/gps_keypad.hpp"
 
+#include "core/gps_types.hpp"
+
 #include <spdlog/spdlog.h>
 #include <cstdio>
 #include <cstdlib>
@@ -42,9 +44,10 @@ bool hasAppKeys(int fd)
            testBit(key_bits, KEY_RIGHT) || testBit(key_bits, KEY_F) || testBit(key_bits, KEY_X) ||
            testBit(key_bits, KEY_Z) || testBit(key_bits, KEY_C) || testBit(key_bits, KEY_SPACE) ||
            testBit(key_bits, KEY_A) || testBit(key_bits, KEY_BACKSPACE) || testBit(key_bits, KEY_0) ||
-           testBit(key_bits, KEY_TAB) || testBit(key_bits, KEY_1) || testBit(key_bits, KEY_2) ||
-           testBit(key_bits, KEY_3) || testBit(key_bits, KEY_4) || testBit(key_bits, KEY_5) ||
-           testBit(key_bits, KEY_6) || testBit(key_bits, KEY_7) || testBit(key_bits, KEY_8) || testBit(key_bits, KEY_9);
+           testBit(key_bits, KEY_TAB) || testBit(key_bits, KEY_HELP) || testBit(key_bits, KEY_1) ||
+           testBit(key_bits, KEY_2) || testBit(key_bits, KEY_3) || testBit(key_bits, KEY_4) ||
+           testBit(key_bits, KEY_5) || testBit(key_bits, KEY_6) || testBit(key_bits, KEY_7) ||
+           testBit(key_bits, KEY_8) || testBit(key_bits, KEY_9);
 }
 
 bool envEnabled(const char* name, bool fallback)
@@ -328,6 +331,8 @@ uint32_t GpsKeypad::translateKey(uint16_t code) const
     }
 
     switch (code) {
+        case KEY_HELP:
+            return gps_key::Help;
         case KEY_ESC:
             return LV_KEY_ESC;
         case KEY_ENTER:
